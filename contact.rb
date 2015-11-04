@@ -36,7 +36,7 @@ class Contact
 	end
 
 	def full_name
-		puts "#{first_name} #{last_name}"
+		"#{first_name} #{last_name}"
 	end
 
 	def self.delete(id_found)
@@ -50,24 +50,26 @@ class Contact
 	# end
 
 	def self.display_attribute(attribute)
+		attribute_array = []
 		case attribute
-			# when "fullname" || "full name"
-			#   @@contacts.each do |contact|
-			# 	puts "#{contact.id}: #{full_name}"
-			# end
+			when "fullname" || "full name"
+			  @@contacts.each do |contact|
+				attrubute_array << contact.full_name
+			end
 		    when "first name"
 		      @@contacts.each do |contact|
-		        puts "#{contact.id}: #{contact.first_name}"
+		        attribute_array << contact.first_name
 		      end
 		    when "last name"
 		      @@contacts.each do |contact|
-		        puts "#{contact.id}: #{contact.last_name}"
+		        attribute_array << contact.last_name
 		      end
 		    when "email"
 		      @@contacts.each do |contact|
-		        puts "#{contact.id}: #{contact.email}"
+		        attribute_array << contact.email
 		      end
     	end
+    	attribute_array
     end
 
  end

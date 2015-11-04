@@ -1,0 +1,33 @@
+body {
+	background-color: #82A1FF;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+#footer {
+	color: #993333;
+	text-align: center;
+
+}
+
+#main {
+	text-align:center;
+	font-size: 125%;
+}
+
+#welcome {
+	color:#8533FF;
+	text-align:center; 
+}
+
+
+#list {
+	list-style-type: none;
+}
+
+#list li:hover {
+	font-family: "Arial Black", Gadget, sans-serif
+}
+
+.navbar-nav :hover {
+	font-family: Impact, Charcoal, sans-serif
+}
