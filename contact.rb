@@ -21,12 +21,6 @@ class Contact
 		@@contacts << new_contact
 	end
 
-	# 	# 1. Ask for a contact ID, then ask for confimation
-	# 	# 2. Get a contact based on the ID, from @@contacts array
-	# 	#    Loop through array, compare ID
-	# 	# 3. Call an instance method on that contact
-	# end
-
 	def self.find(id_to_look_for)
 		@@contacts.find { |contact| contact.id == id_to_look_for }
 	end
@@ -44,10 +38,6 @@ class Contact
 		id_found.to_i == contact.id
 		end
 	end
-
-	# def self.modify_first(first_name)
-	# 	@first_name.delete { |contact| contact.id ==}
-	# end
 
 	def self.display_attribute(attribute)
 		attribute_array = []
