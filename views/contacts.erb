@@ -3,7 +3,7 @@
 <div class="container">
 	<col>
 		<tr>
-			<ul>
+			<ul id="acc_contacts">
 			  <% Contact.all.each do |contact| %>
 			    <ul><a href="/contacts/<%= contact.id %>">Name: <%= contact.first_name %> <%= contact.last_name %> <br> Email: <%= contact.email %> <br> Notes: <%= contact.notes %> <br> ID: <%= contact.id %> </a><br><br></ul>
 			  <% end %>

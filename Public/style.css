@@ -28,7 +28,9 @@
 	margin-bottom: 50px; 
 }
 
-
+#acc_contacts {
+	border: 10px black solid;
+}
 #list {
 	text-align: center;
 	list-style-type: none;
