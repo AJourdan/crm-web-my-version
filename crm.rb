@@ -21,7 +21,10 @@ end
 
 get "/contacts/:id" do
   @contact = Contact.find(params[:id].to_i)
-  erb :contacts
+    erb :contacts
+  else
+  	raise Sinatra::NotFound
+  end
 end
 
 # get "/contacts/delete_contact" do
