@@ -34,11 +34,8 @@ class Contact
 		"#{first_name} #{last_name}"
 	end
 
-	def self.delete(id_found)
-		@@contacts.delete do |contact|
-		id_found.to_i == contact.id
-		end
-	end
+	def remove
+    @@contacts.delete_if { |contact| contact.id == self.id }
 
 	def self.display_attribute(attribute)
 		attribute_array = []
