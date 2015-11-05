@@ -47,6 +47,7 @@ put "/contacts/:id" do
   end
 end
 
+
 get "/contacts/:id" do
   @contact = Contact.find(params[:id].to_i)
   if @contact
