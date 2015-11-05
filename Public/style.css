@@ -13,17 +13,30 @@ body {
 #main {
 	text-align:center;
 	font-size: 200%;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
 }
+
+#allc {
+	color:#8533FF;
+	text-align:center;
+	margin-top: 100px;
+	margin-bottom: 50px; 
+}
+
 
 #welcome {
 	color:#8533FF;
-	text-align:center; 
+	text-align:center;
+	margin-top: 100px;
+	margin-bottom: 50px; 
 }
 
 
 #list {
 	text-align: center;
 	list-style-type: none;
+	font-size: 200%;
+	font-weight: bold;
 }
 
 #list li:hover {
@@ -37,6 +50,13 @@ body {
 form {
 	display: block;
 	margin-top: 0em;
+}
+
+#new_contact {
+	color:#8533FF;
+	text-align:center;
+	margin-top: 100px;
+	margin-bottom: 50px;
 }
 
 #submit {
