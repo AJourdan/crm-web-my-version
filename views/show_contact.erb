@@ -1,16 +1,17 @@
-<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
+<br>
+
+
+<h1 id="contact_name"><%= @contact.first_name %> <%= @contact.last_name %></h1>
 <p><strong>Email:</strong> <%= @contact.email %></p>
 <p><strong>Note:</strong></p>
 <p><%= @contact.notes %></p>
 
 
-
-<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
-<p><strong>Email:</strong> <%= @contact.email %></p>
-<p><strong>Note:</strong></p>
-<p><%= @contact.note %></p>
-
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" name="Delete Contact">
+  <input id="delete_button" type="submit" name="Delete Contact" value="Delete">
+</form>
+
+<form action="/contacts/<%= @contact.id %>/edit" method="get">
+  <input id="edit_button" type="submit" name="Edit Contact" value="Edit">
 </form>

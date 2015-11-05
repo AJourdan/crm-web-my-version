@@ -5,16 +5,12 @@
 		<tr>
 			<ul>
 			  <% Contact.all.each do |contact| %>
-			    <ul>Name: <%= contact.first_name %> <%= contact.last_name %> <br> Email: <%= contact.email %> <br> Notes: <%= contact.notes %> <br><br></ul>
+			    <ul><a href="/contacts/<%= contact.id %>">Name: <%= contact.first_name %> <%= contact.last_name %> <br> Email: <%= contact.email %> <br> Notes: <%= contact.notes %> <br> ID: <%= contact.id %> </a><br><br></ul>
 			  <% end %>
 			</ul>
 		</tr>
 	</col>
 </table>
-
-<input id="delete_button" type="button" value="Delete" onclick="msg()"> <input id="edit_button" type="button" value="Edit" onclick="msg()">
-
-
 
 
 

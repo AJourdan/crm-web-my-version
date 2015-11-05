@@ -35,8 +35,9 @@ class Contact
 	end
 
 	def remove
-    @@contacts.delete_if { |contact| contact.id == self.id }
-
+    	@@contacts.delete_if { |contact| contact.id == self.id }
+	end
+	
 	def self.display_attribute(attribute)
 		attribute_array = []
 		case attribute
