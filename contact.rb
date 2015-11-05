@@ -5,19 +5,20 @@ class Contact
 	@@contacts = []
 	@@id = 1
 
-	def initialize(first_name, last_name, email, notes)
+	def initialize(first_name, last_name, email, notes )
 		@first_name = first_name
 		@last_name = last_name
 		@email = email
 		@notes = notes
+		@picture
 
 		@id = @@id
 		@@id += 1
 
 	end
 
-	def self.create(first_name, last_name, email, notes)
-		new_contact = Contact.new(first_name, last_name, email, notes)
+	def self.create(first_name, last_name, email, notes )
+		new_contact = Contact.new(first_name, last_name, email, notes )
 		@@contacts << new_contact
 	end
 

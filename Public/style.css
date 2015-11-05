@@ -37,3 +37,18 @@ form {
 	display: block;
 	margin-top: 0em;
 }
+
+#submit {
+	color:#000000;
+	background-color:#005CE6;
+}
+
+#delete_button {
+	background-color: #EB0000;
+	color:#FFFFFF;
+}
+
+#edit_button {
+	background-color: #009900;
+	color:#FFFFFF;
+}

@@ -1,9 +1,9 @@
-<h1>Create a new contact</h1>
+<h1>Choose the contacts you want to delete Contacts</h1>
 
-
-<form action="/contacts" method="post">
+<form action="/delete_contacts" method="delete">
 <ul>
   <li>
+  <!-- <input type="radio" name="delete_person" value="person"> -->
   <label for="first_name">First name:</label>
   <input type="text" id= "" name="first_name" placeholder="e.g. Alon">
   </li>
@@ -30,3 +30,10 @@
   <input id="submit" type="submit" name="Submit">
 </form>
 </ul>
+</form>
+
+
+<h1>Create a new contact</h1>
+
+
+<form action="/contacts" method="post">

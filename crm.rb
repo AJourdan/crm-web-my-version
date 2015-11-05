@@ -2,7 +2,9 @@ require_relative 'contact'
 require 'sinatra'
 
 # Temporary fake data so that we always find contact with id 1000.
-Contact.create("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar")
+Contact.create("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar" )
+
+# GET /contacts/new
 
 get "/" do
   @crm_app_name = "My CRM"
@@ -13,14 +15,18 @@ get "/contacts" do
   erb :contacts
 end
 
-get "/contacts/1000" do
-  @contact = Contact.find(1000)
-  erb :show_contact
-end
-
 get "/contacts/new" do
   erb :new_contact
 end
+
+get "/contacts/:id" do
+  @contact = Contact.find(params[:id].to_i)
+  erb :contacts
+end
+
+# get "/contacts/delete_contact" do
+# 	erb :
+# end
 
 # delete "/contacts" do
 # 	Contact.delete()
@@ -32,7 +38,7 @@ end
 # end
 
 post "/contacts" do
-  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note] )
   redirect to('/contacts')
 end
 
