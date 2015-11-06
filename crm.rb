@@ -32,7 +32,7 @@ get "/contacts/new" do
 end
 
 get "/contacts/:id/edit" do
-  @contact = Contact.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
     erb :edit_contact
   else
@@ -41,9 +41,9 @@ get "/contacts/:id/edit" do
 end
 
 delete "/contacts/:id" do
-  @contact = Contact.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
-    @contact.remove
+    @contact.destroy
     redirect to("/contacts")
   else
     raise Sinatra::NotFound
@@ -51,7 +51,7 @@ delete "/contacts/:id" do
 end
 
 put "/contacts/:id" do
-  @contact = Contact.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
     @contact.first_name = params[:first_name]
     @contact.last_name = params[:last_name]
